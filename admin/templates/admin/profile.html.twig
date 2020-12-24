@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Profile
+{% endblock %}
+
+{% block body %}
+
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="card">
+			<h5 class="card-header">Profile</h5>
+			<div class="card-body">
+				<div class="media">
+					<img class="mr-3 user-avatar-lg rounded" src="/{{ data['profileImage'] }}" alt="image">
+					<div class="media-body">
+						<h1>{{ data['firstname'] }}
+							{{ data['lastname'] }}</h1>
+						<p>
+							<a href="#" class="btn btn-xs btn-warning circle mt-1">{{ data['mobilenumber'] }}</a>
+							<br/>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-12">
+		<div class="simple-outline-card">
+			<ul class="nav nav-tabs" id="myTab6" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link border-left-0 active show" id="home-tab-simple-outline" data-toggle="tab" href="#home-simple-outline" role="tab" aria-controls="home" aria-selected="true">Change Password</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="profile-tab-simple-outline" data-toggle="tab" href="#profile-simple-outline" role="tab" aria-controls="profile" aria-selected="false">App Notification</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent6">
+				<div class="tab-pane fade active show" id="home-simple-outline" role="tabpanel" aria-labelledby="home-tab-simple-outline">
+					<div class="form-row">
+						<form action="change-password" method="post">
+							{% for message in app.flashes('success') %}
+								<div class="alert alert-success">
+									{{ message }}
+								</div>
+							{% endfor %}
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+								<label for="validationCustom03">New password</label>
+								<input type="password" class="form-control" id="validationCustom03" placeholder="old Password" required="">
+								<div class="invalid-feedback">
+									Please provide a valid city.
+								</div>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+								<label for="validationCustom04">Confirm password</label>
+								<input type="password" name="plainPassword" class="form-control" id="validationCustom04" placeholder="New Password" required="">
+								<div class="invalid-feedback">
+									Please provide a valid state.
+								</div>
+							</div>
+
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="form-group">
+									<div class="form-check">
+										<div class="invalid-feedback">
+											You must agree before submitting.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+								<button class="btn btn-primary" type="submit">Submit Request</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="profile-simple-outline" role="tabpanel" aria-labelledby="profile-tab-simple-outline">
+					<h3>0 Notification </h3>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
