@@ -71,14 +71,29 @@ class __TwigTemplate_0ec9ff8c55e9f20169c0f6b53cc8cf97590e2491423fbaceee0e8fbc675
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "
-\t<br/>
+        echo "\t<div class=\"row\">
+\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t<div class=\"page-header\">
+\t\t\t\t<h3 class=\"mb-2\">Agency List</h3>
+\t\t\t\t<div class=\"page-breadcrumb\">
+\t\t\t\t\t<nav aria-label=\"breadcrumb\">
+\t\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"breadcrumb-link\">Dashboard</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Agency List</li>
+\t\t\t\t\t\t</ol>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"body-wrapper\" style=\"background-color: white;padding: 22px;\">
 \t\t<nav class=\"navbar navbar-expand-sm \" style=\"background-color: #e1e1e1 !important;\">
 \t\t\t<ul class=\"navbar-nav\">
 \t\t\t\t<li class=\"nav-item\" style=\"border-bottom: none;\">
 \t\t\t\t\t<a href=\"new-users\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Users</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Agencies</button>
 \t\t\t\t\t</a>
 \t\t\t\t\t<a href=\"admin/dashboard\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">View My Dashboard</button>
@@ -87,27 +102,31 @@ class __TwigTemplate_0ec9ff8c55e9f20169c0f6b53cc8cf97590e2491423fbaceee0e8fbc675
 
 \t\t\t</ul>
 \t\t</nav>
+\t\t<input type=\"hidden\" value=\"";
+        // line 38
+        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 38, $this->source); })()), "html", null, true);
+        echo "\" id=\"server_path\">
 \t\t<br/>
- \t\t";
-        // line 24
+\t\t";
+        // line 40
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 24));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 40));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 25
-            echo "            <div class=\"alert alert-success\">
-                ";
-            // line 26
+            // line 41
+            echo "\t\t\t<div class=\"alert alert-success\">
+\t\t\t\t";
+            // line 42
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
-            </div>
-        ";
+\t\t\t</div>
+\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 45
         echo "\t\t";
-        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 29, $this->source); })());
+        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 45, $this->source); })());
         echo "
 
 \t\t<div class=\"pagination\" style=\"background-color: whitesmoke;\">
@@ -139,7 +158,7 @@ class __TwigTemplate_0ec9ff8c55e9f20169c0f6b53cc8cf97590e2491423fbaceee0e8fbc675
 
     public function getDebugInfo()
     {
-        return array (  109 => 29,  100 => 26,  97 => 25,  93 => 24,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
+        return array (  128 => 45,  119 => 42,  116 => 41,  112 => 40,  107 => 38,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -150,14 +169,29 @@ class __TwigTemplate_0ec9ff8c55e9f20169c0f6b53cc8cf97590e2491423fbaceee0e8fbc675
 {% endblock %}
 
 {% block body %}
-
-\t<br/>
+\t<div class=\"row\">
+\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t<div class=\"page-header\">
+\t\t\t\t<h3 class=\"mb-2\">Agency List</h3>
+\t\t\t\t<div class=\"page-breadcrumb\">
+\t\t\t\t\t<nav aria-label=\"breadcrumb\">
+\t\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"breadcrumb-link\">Dashboard</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Agency List</li>
+\t\t\t\t\t\t</ol>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"body-wrapper\" style=\"background-color: white;padding: 22px;\">
 \t\t<nav class=\"navbar navbar-expand-sm \" style=\"background-color: #e1e1e1 !important;\">
 \t\t\t<ul class=\"navbar-nav\">
 \t\t\t\t<li class=\"nav-item\" style=\"border-bottom: none;\">
 \t\t\t\t\t<a href=\"new-users\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Users</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Agencies</button>
 \t\t\t\t\t</a>
 \t\t\t\t\t<a href=\"admin/dashboard\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">View My Dashboard</button>
@@ -166,12 +200,13 @@ class __TwigTemplate_0ec9ff8c55e9f20169c0f6b53cc8cf97590e2491423fbaceee0e8fbc675
 
 \t\t\t</ul>
 \t\t</nav>
+\t\t<input type=\"hidden\" value=\"{{ server_path }}\" id=\"server_path\">
 \t\t<br/>
- \t\t{% for message in app.flashes('success') %}
-            <div class=\"alert alert-success\">
-                {{ message }}
-            </div>
-        {% endfor %}
+\t\t{% for message in app.flashes('success') %}
+\t\t\t<div class=\"alert alert-success\">
+\t\t\t\t{{ message }}
+\t\t\t</div>
+\t\t{% endfor %}
 \t\t{{ tableData|raw }}
 
 \t\t<div class=\"pagination\" style=\"background-color: whitesmoke;\">

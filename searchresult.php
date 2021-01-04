@@ -52,7 +52,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-3 navbar navbar-expand-lg navbar-light">
-        <div class="header_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="header_logo"><a href="index.php"><img src="images/logo.png"></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       </div>
       <div class="col-lg-9">
@@ -60,7 +60,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <button class="close-toggler" type="button" data-toggle="offcanvas"> <span><i class="fas fa-times-circle" aria-hidden="true"></i></span> </button>
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html"> Home </a> </li>
+              <li class="nav-item"><a class="nav-link" href="index.php"> Home </a> </li>
               <li class="nav-item"><a class="nav-link" href="#.">Latest listings</a> </li>
               <li class="nav-item"><a class="nav-link" href="agencies.html">Agencies</a></li>
               <li class="nav-item"><a class="nav-link" href="#.">Investment</a></li>
@@ -144,10 +144,10 @@
             <div class="input-group">
               <select class="wide select_option" style="display: none;">
                 <option data-display="Property Type">Price (AED)</option>
-                <option>999-1999</option>
-                <option>1999-2999</option>
-                <option>2999-3999</option>
-                <option>3999-4999</option>
+                <option value="999-1999">BHD  999 - BHD  1999</option>
+                <option value="1999-2999">BHD  1999 - BHD  2999</option>
+                <option value="2999-3999">BHD  2999 - BHD  3999</option>
+                <option value="3999-4999">BHD  3999 - BHD  4999</option>
               </select>
               <div class="nice-select wide select_option" tabindex="0"><span class="current" data-input="propertyPrice">Price</span>
                 <ul class="list">
@@ -324,7 +324,7 @@
         
         <!--Row Start-->
         <ul class="row">
-        <?php include('api/suggetionProduct.php') ?>
+          <?php include('api/suggetionProduct.php') ?>
         </ul>
         <!--Row End-->
         
@@ -342,7 +342,7 @@
     <div class="footer-upper">
       <div class="row footerSocialIcon">
         <div class="col-md-6">
-          <a href="index.html"> <img alt="" src="images/logo.png"> </a>
+          <a href="index.php"> <img alt="" src="images/logo.png"> </a>
         </div>
 
         <div class="col-md-6">

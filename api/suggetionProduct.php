@@ -1,5 +1,5 @@
 <?php
-$url = 'http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/api/properties/search?'.$_SERVER['QUERY_STRING'];
+$url = 'http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/api/properties/search?' . $_SERVER['QUERY_STRING'];
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($curl);
@@ -7,11 +7,12 @@ curl_close($curl);
 $products = json_decode($response, true)['data'];
 foreach ($products as $key => $product) {
     ?>
-    
-    
+
+
 <li class="col-lg-6">
+<a href="product.php?id=<?php echo $product['id']; ?>">
     <div class="property_box wow fadeInUp">
-        <div class="propertyImg"><img alt="" src="http://localhost:8000/<?php echo $product['assets']; ?>"></div>
+        <div class="propertyImg"><img alt="" src="http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/<?php echo $product['assets']; ?>"></div>
         <h3><a href="#"><?php echo $product['Title']; ?></a></h3>
         <div class="property_location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
             <?php echo $product['location']; ?>
@@ -42,6 +43,7 @@ foreach ($products as $key => $product) {
             <div class="sale">For Sale</div>
         </div>
     </div>
+</a>
 </li>
 <?php
 }

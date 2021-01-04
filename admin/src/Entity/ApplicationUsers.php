@@ -45,7 +45,7 @@ class ApplicationUsers
     private $userId;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $status;
 
@@ -93,6 +93,11 @@ class ApplicationUsers
      * @ORM\ManyToOne(targetEntity=UserPlan::class)
      */
     private $prevPlan;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=UserAddons::class)
+     */
+    private $addons;
 
     public function __construct()
     {
@@ -164,12 +169,12 @@ class ApplicationUsers
         return $this;
     }
 
-    public function getStatus(): ?bool
+    public function getStatus(): ?int
     {
         return $this->status;
     }
 
-    public function setStatus(bool $status): self
+    public function setStatus(int $status): self
     {
         $this->status = $status;
 
@@ -268,6 +273,18 @@ class ApplicationUsers
     public function setPrevPlan(?UserPlan $prevPlan): self
     {
         $this->prevPlan = $prevPlan;
+
+        return $this;
+    }
+
+    public function getAddons(): ?UserAddons
+    {
+        return $this->addons;
+    }
+
+    public function setAddons(?UserAddons $addons): self
+    {
+        $this->addons = $addons;
 
         return $this;
     }

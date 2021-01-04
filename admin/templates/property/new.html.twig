@@ -78,7 +78,7 @@
 				</div>
 				<!--------------------------------+++------------------------------------>
 
-
+			<input type="hidden" value="{{ server_path }}" id="server_path">
 				<div class="tab-pane fade" id="profile-outline-vertical" role="tabpanel" aria-labelledby="profile-outline-verti-tab">
 					<div class="form-group">
 						<label for="input-select">EWA</label>
@@ -220,8 +220,17 @@
 				<div class="tab-pane" id="final-outline-vertical" role="tabpanel" aria-labelledby="final-outline-verti-tab">
 					<div class="form-group">
 						<label for="inputText3" class="col-form-label">Tags</label>
-						<input id="tags" name="tags" type="text" class="form-control" required>
+						<input id="tags" name="tags" type="text" class="form-control" value="{{ Property['SeoTags'] }}" required>
 					</div>
+
+					<div class="form-group">
+						<label for="inputText3" class="col-form-label">property For</label>
+						<select class="form-control" id="property_for" name="property_for" required>
+							<option value="RENT" {% if Property['listingFor'] == 'RENT' %} selected {% endif %}>Rent</option>
+							<option value="SALE" {% if Property['listingFor'] == 'SALE' %} selected {% endif %}>Sale</option>
+						</select>
+					</div>
+					
 					<div class="form-group">
 						<label for="inputText3" class="col-form-label">Property Related To</label>
 						<select class="form-control" id="property_relat" name="property_relat" required>

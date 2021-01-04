@@ -12,6 +12,7 @@ return [
         '/application/config' => [[['_route' => 'config', '_controller' => 'App\\Controller\\AdminController::config'], null, null, null, false, false, null]],
         '/api/properties' => [[['_route' => 'api_property_list', '_controller' => 'App\\Controller\\Api\\PropertyController::index'], null, null, null, false, false, null]],
         '/api/properties/search' => [[['_route' => 'api_property', '_controller' => 'App\\Controller\\Api\\PropertyController::search'], null, null, null, false, false, null]],
+        '/api/properties/details' => [[['_route' => 'single_property', '_controller' => 'App\\Controller\\Api\\PropertyController::singleProduct'], null, null, null, false, false, null]],
         '/application/users' => [[['_route' => 'agency_users', '_controller' => 'App\\Controller\\ApplicationUsersController::index'], null, null, null, false, false, null]],
         '/application/new-users' => [[['_route' => 'application_new_users', '_controller' => 'App\\Controller\\ApplicationUsersController::newUser'], null, null, null, false, false, null]],
         '/application/admin/dashboard' => [[['_route' => 'admin_profile', '_controller' => 'App\\Controller\\ApplicationUsersController::adminDashboard'], null, null, null, false, false, null]],
@@ -49,24 +50,28 @@ return [
                             .')'
                             .'|dd\\-to\\-featured\\-list(?:/([^/]++))?(*:348)'
                         .')'
-                        .'|fsbo/([^/]++)/dashboard(*:380)'
+                        .'|user/([^/]++)/delete(*:377)'
+                        .'|fsbo/([^/]++)/dashboard(*:408)'
                         .'|propert(?'
                             .'|ies(?'
-                                .'|(?:/([^/]++))?(*:418)'
-                                .'|/add(?:/([^/]++))?(*:444)'
+                                .'|(?:/([^/]++))?(*:446)'
+                                .'|/add(?:/([^/]++))?(*:472)'
                             .')'
                             .'|y(?'
-                                .'|(?:/([^/]++))?(*:471)'
+                                .'|(?:/([^/]++))?(*:499)'
                                 .'|/([^/]++)/(?'
-                                    .'|edit(*:496)'
-                                    .'|delete(*:510)'
+                                    .'|edit(*:524)'
+                                    .'|delete(*:538)'
                                 .')'
                             .')'
                         .')'
-                        .'|delete\\-assets(?:/([^/]++))?(*:549)'
-                        .'|new\\-plan(?:/([^/]++))?(*:580)'
+                        .'|delete\\-assets(?:/([^/]++))?(*:577)'
+                        .'|new\\-plan(?:/([^/]++))?(*:608)'
                     .')'
-                    .'|i/properties/([^/]++)/status/([^/]++)(*:626)'
+                    .'|i/(?'
+                        .'|properties/([^/]++)/status/([^/]++)(*:657)'
+                        .'|user/([^/]++)/status/([^/]++)(*:694)'
+                    .')'
                 .')'
             .')/?$}sD',
     ],
@@ -82,16 +87,18 @@ return [
         273 => [[['_route' => 'agency_profile', '_controller' => 'App\\Controller\\ApplicationUsersController::agencyDashboard'], ['id'], null, null, false, false, null]],
         302 => [[['_route' => 'agency_plan_update', '_controller' => 'App\\Controller\\ApplicationUsersController::agencyPlanChange'], ['id', 'plan'], null, null, false, true, null]],
         348 => [[['_route' => 'property_featured', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::addToFeaturedList'], ['id'], null, null, false, true, null]],
-        380 => [[['_route' => 'agent_dash', '_controller' => 'App\\Controller\\FsboController::agentDashboard'], ['id'], null, null, false, false, null]],
-        418 => [[['_route' => 'property', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::index'], ['id'], null, null, false, true, null]],
-        444 => [[['_route' => 'property_new', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::add'], ['id'], null, null, false, true, null]],
-        471 => [[['_route' => 'property_view', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::singleView'], ['id'], null, null, false, true, null]],
-        496 => [[['_route' => 'property_edit', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::Propertyedit'], ['id'], null, null, false, false, null]],
-        510 => [[['_route' => 'property_delete', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::propertyDelete'], ['id'], null, null, false, false, null]],
-        549 => [[['_route' => 'property_assets', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::deleteAssets'], ['id'], null, null, false, true, null]],
-        580 => [[['_route' => 'new_plans', 'id' => null, '_controller' => 'App\\Controller\\UserPlansController::newPlan'], ['id'], null, null, false, true, null]],
-        626 => [
-            [['_route' => 'api_property_status', '_controller' => 'App\\Controller\\Api\\PropertyController::changeStatus'], ['pid', 'status'], null, null, false, true, null],
+        377 => [[['_route' => 'admin_delete_user', '_controller' => 'App\\Controller\\ApplicationUsersController::userDelete'], ['id'], null, null, false, false, null]],
+        408 => [[['_route' => 'agent_dash', '_controller' => 'App\\Controller\\FsboController::agentDashboard'], ['id'], null, null, false, false, null]],
+        446 => [[['_route' => 'property', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::index'], ['id'], null, null, false, true, null]],
+        472 => [[['_route' => 'property_new', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::add'], ['id'], null, null, false, true, null]],
+        499 => [[['_route' => 'property_view', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::singleView'], ['id'], null, null, false, true, null]],
+        524 => [[['_route' => 'property_edit', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::Propertyedit'], ['id'], null, null, false, false, null]],
+        538 => [[['_route' => 'property_delete', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::propertyDelete'], ['id'], null, null, false, false, null]],
+        577 => [[['_route' => 'property_assets', 'id' => null, '_controller' => 'App\\Controller\\PropertyController::deleteAssets'], ['id'], null, null, false, true, null]],
+        608 => [[['_route' => 'new_plans', 'id' => null, '_controller' => 'App\\Controller\\UserPlansController::newPlan'], ['id'], null, null, false, true, null]],
+        657 => [[['_route' => 'api_property_status', '_controller' => 'App\\Controller\\Api\\PropertyController::changeStatus'], ['pid', 'status'], null, null, false, true, null]],
+        694 => [
+            [['_route' => 'api_users_status', '_controller' => 'App\\Controller\\Api\\UsersController::userChangeStatus'], ['uid', 'status'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

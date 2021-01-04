@@ -66,10 +66,10 @@ class Property extends \App\Entity\Property implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Title', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyStatus', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyType', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'investment', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'ewa', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'furnishing', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'buildingName', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'location', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'value', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Address', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'nearBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'bedRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'BathRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaWidth', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaHight', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'dateofupdated', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'map', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Mortgage', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'features', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'applicationAssets', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyDetails', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'status'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Title', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyStatus', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyType', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'investment', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'ewa', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'furnishing', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'buildingName', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'location', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'value', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Address', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'nearBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'bedRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'BathRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaWidth', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaHight', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'dateofupdated', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'map', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Mortgage', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'features', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'applicationAssets', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyDetails', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'status', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'listingFor'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Title', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyStatus', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyType', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'investment', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'ewa', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'furnishing', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'buildingName', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'location', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'value', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Address', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'nearBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'bedRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'BathRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaWidth', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaHight', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'dateofupdated', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'map', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Mortgage', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'features', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'applicationAssets', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyDetails', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'status'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Title', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyStatus', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyType', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'investment', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'ewa', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'furnishing', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'buildingName', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'location', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'value', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Address', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'nearBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'bedRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'BathRooms', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaWidth', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'AreaHight', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'dateofupdated', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'map', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'Mortgage', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'features', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdBy', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'applicationAssets', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'propertyDetails', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'status', '' . "\0" . 'App\\Entity\\Property' . "\0" . 'listingFor'];
     }
 
     /**
@@ -772,6 +772,28 @@ class Property extends \App\Entity\Property implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', [$status]);
 
         return parent::setStatus($status);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getListingFor(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getListingFor', []);
+
+        return parent::getListingFor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setListingFor(string $listingFor): \App\Entity\Property
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setListingFor', [$listingFor]);
+
+        return parent::setListingFor($listingFor);
     }
 
 }

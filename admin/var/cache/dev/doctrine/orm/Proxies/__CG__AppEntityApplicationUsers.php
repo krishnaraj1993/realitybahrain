@@ -66,10 +66,10 @@ class ApplicationUsers extends \App\Entity\ApplicationUsers implements \Doctrine
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'id', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'firstname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'mobilenumber', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'address', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'userId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'status', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'createAt', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'CreatedBy', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastActivityDate', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'subUsers', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'ParentId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'profileImage', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'currentPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'planStatus', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'prevPlan'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'id', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'firstname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'mobilenumber', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'address', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'userId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'status', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'createAt', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'CreatedBy', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastActivityDate', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'subUsers', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'ParentId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'profileImage', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'currentPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'planStatus', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'prevPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'addons'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'id', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'firstname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'mobilenumber', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'address', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'userId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'status', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'createAt', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'CreatedBy', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastActivityDate', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'subUsers', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'ParentId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'profileImage', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'currentPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'planStatus', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'prevPlan'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'id', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'firstname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastname', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'mobilenumber', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'address', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'userId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'status', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'createAt', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'CreatedBy', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'lastActivityDate', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'subUsers', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'ParentId', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'profileImage', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'currentPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'planStatus', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'prevPlan', '' . "\0" . 'App\\Entity\\ApplicationUsers' . "\0" . 'addons'];
     }
 
     /**
@@ -304,7 +304,7 @@ class ApplicationUsers extends \App\Entity\ApplicationUsers implements \Doctrine
     /**
      * {@inheritDoc}
      */
-    public function getStatus(): ?bool
+    public function getStatus(): ?int
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', []);
@@ -315,7 +315,7 @@ class ApplicationUsers extends \App\Entity\ApplicationUsers implements \Doctrine
     /**
      * {@inheritDoc}
      */
-    public function setStatus(bool $status): \App\Entity\ApplicationUsers
+    public function setStatus(int $status): \App\Entity\ApplicationUsers
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', [$status]);
@@ -497,6 +497,28 @@ class ApplicationUsers extends \App\Entity\ApplicationUsers implements \Doctrine
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrevPlan', [$prevPlan]);
 
         return parent::setPrevPlan($prevPlan);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAddons(): ?\App\Entity\UserAddons
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAddons', []);
+
+        return parent::getAddons();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setAddons(?\App\Entity\UserAddons $addons): \App\Entity\ApplicationUsers
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAddons', [$addons]);
+
+        return parent::setAddons($addons);
     }
 
 }

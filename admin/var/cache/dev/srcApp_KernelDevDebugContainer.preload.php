@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container5ExnMXg/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerYD4UEPa/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +27,7 @@ $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\AgentController';
 $classes[] = 'App\Controller\Api\PropertyController';
+$classes[] = 'App\Controller\Api\UsersController';
 $classes[] = 'App\Controller\ApplicationUsersController';
 $classes[] = 'App\Controller\FsboController';
 $classes[] = 'App\Controller\PropertyController';
@@ -46,6 +47,7 @@ $classes[] = 'App\Repository\PropertyDetailsRepository';
 $classes[] = 'App\Repository\PropertyRepository';
 $classes[] = 'App\Repository\PropertyStatusRepository';
 $classes[] = 'App\Repository\PropertyTypeRepository';
+$classes[] = 'App\Repository\UserAddonsRepository';
 $classes[] = 'App\Repository\UserPlanRepository';
 $classes[] = 'App\Repository\UsersRepository';
 $classes[] = 'App\Repository\VisitorsRepository';

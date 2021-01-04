@@ -66,7 +66,9 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t<!-- navbar -->
 \t\t\t<!-- ============================================================== -->
 \t\t\t\t<div class=\"dashboard-header\"> <nav class=\"navbar navbar-expand-lg bg-white fixed-top\">
-\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">Reality Bahrain</a>
+\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">
+\t\t\t\t\t<img src=\"http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/images/logo.png\" style=\"width: 23%;\">
+\t\t\t\t\t</a>
 \t\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t\t</button>
@@ -139,7 +141,10 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t\t\t\t\t\t\t<li class=\"connection-list\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 \">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/application/1/profile\" class=\"connection-item\"><img src=\"https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+        // line 112
+        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 112, $this->source); })()), "html", null, true);
+        echo "/application/1/profile\" class=\"connection-item\"><img src=\"https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span>Profile</span>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -158,8 +163,8 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 128
-        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 128, $this->source); })()), "html", null, true);
+        // line 130
+        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 130, $this->source); })()), "html", null, true);
         echo "/logout\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"conntection-footer\" style=\"background-color: red;\">
 \t\t\t\t\t\t\t\t\t\t\t\tLogout
@@ -190,14 +195,14 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t\t\t\t\t\t\tMenu
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t";
-        // line 157
+        // line 159
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 157, $this->source); })()), "session", [], "any", false, false, false, 157), "get", [0 => "menulist"], "method", false, false, false, 157));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 159, $this->source); })()), "session", [], "any", false, false, false, 159), "get", [0 => "menulist"], "method", false, false, false, 159));
         foreach ($context['_seq'] as $context["key"] => $context["menu"]) {
-            // line 158
+            // line 160
             echo "\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t\t<a class=\"nav-link ";
-            // line 159
+            // line 161
             if (twig_test_iterable($context["menu"])) {
                 echo "collapsed";
             }
@@ -206,33 +211,33 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
                 echo " href=\"#\" data-toggle=\"collapse\" aria-expanded=\"false\" data-target=\"#submenu-1\" aria-controls=\"submenu-1\" ";
             } else {
                 echo " href=\"";
-                echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 159, $this->source); })()), "html", null, true);
+                echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 161, $this->source); })()), "html", null, true);
                 echo twig_escape_filter($this->env, $context["menu"], "html", null, true);
                 echo "\" ";
             }
             echo ">
 \t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-fw fa-rocket\"></i>
 \t\t\t\t\t\t\t\t\t\t\t";
-            // line 161
+            // line 163
             echo twig_escape_filter($this->env, $context["key"], "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t\t\t";
-            // line 162
+            // line 164
             if (twig_test_iterable($context["menu"])) {
-                // line 163
+                // line 165
                 echo "
 \t\t\t\t\t\t\t\t\t\t\t<div id=\"submenu-1\" class=\"submenu collapse\" style=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"nav flex-column\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t";
-                // line 166
+                // line 168
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($context["menu"]);
                 foreach ($context['_seq'] as $context["listk"] => $context["list"]) {
-                    // line 167
+                    // line 169
                     echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
-                    // line 168
-                    echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 168, $this->source); })()), "html", null, true);
+                    // line 170
+                    echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 170, $this->source); })()), "html", null, true);
                     echo twig_escape_filter($this->env, $context["list"], "html", null, true);
                     echo "\">";
                     echo twig_escape_filter($this->env, $context["listk"], "html", null, true);
@@ -242,20 +247,20 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['listk'], $context['list'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 170
+                // line 172
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t";
             }
-            // line 174
+            // line 176
             echo "\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['menu'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 176
+        // line 178
         echo "\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</nav>
@@ -269,9 +274,9 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t<!-- ============================================================== -->
 \t\t\t\t<div class=\"dashboard-wrapper\"> <div class=\"dashboard-ecommerce\">
 \t\t\t\t\t<div class=\"container-fluid dashboard-content \"> ";
-        // line 188
+        // line 190
         $this->displayBlock('body', $context, $blocks);
-        // line 189
+        // line 191
         echo "\t\t\t\t\t\t<!-- ============================================================== -->
 \t\t\t\t\t\t<!-- end pageheader  -->
 \t\t\t\t\t\t<!-- ============================================================== -->
@@ -311,9 +316,9 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t<!-- Optional JavaScript -->
 \t\t\t<!-- jquery 3.3.1 -->
 \t\t\t\t";
-        // line 227
+        // line 229
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 267
+        // line 269
         echo "\t\t</body>
 \t</html>
 </body></html>
@@ -384,7 +389,7 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 
     }
 
-    // line 188
+    // line 190
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -396,7 +401,7 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 
     }
 
-    // line 227
+    // line 229
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -408,73 +413,73 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
         echo "\"> </script>
 \t\t\t\t<!-- bootstap bundle js -->
 \t\t\t\t<script src=\"";
-        // line 229
+        // line 231
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- slimscroll js -->
 \t\t\t\t<script src=\"";
-        // line 231
+        // line 233
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/slimscroll/jquery.slimscroll.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- main js -->
 \t\t\t\t<script src=\"";
-        // line 233
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/js/main-js.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- chart chartist js -->
 \t\t\t\t<script src=\"";
-        // line 235
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/chartist-bundle/chartist.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- sparkline js -->
 \t\t\t\t<script src=\"";
-        // line 237
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/sparkline/jquery.sparkline.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- morris js -->
 \t\t\t\t<script src=\"";
-        // line 239
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/morris-bundle/raphael.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 240
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/morris-bundle/morris.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<!-- chart c3 js -->
 \t\t\t\t<script src=\"";
-        // line 242
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/c3charts/c3.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 243
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/c3charts/d3-5.4.0.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 244
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/charts/c3charts/C3chartjs.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 245
+        // line 247
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/libs/js/dashboard-ecommerce.js"), "html", null, true);
         echo "\"></script>
 
 \t\t\t\t<script src=\"";
-        // line 247
+        // line 249
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/multi-select/js/jquery.multi-select.js"), "html", null, true);
         echo "\"></script>
 
 \t\t\t\t<script src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 250
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/datatables/js/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 252
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/datatables/js/buttons.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 253
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/datatables/js/data-table.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js\"></script>
@@ -487,15 +492,15 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t\t<script src=\"https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js\"></script>
 \t\t\t\t<script src=\"https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js\"></script>
 \t\t\t\t<script src=\"";
-        // line 263
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/sweetalert.min.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 264
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/parsley/parsley.js"), "html", null, true);
         echo "\"></script>
 \t\t\t\t<script src=\"";
-        // line 265
+        // line 267
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/script.js"), "html", null, true);
         echo "\"></script>
 \t\t\t";
@@ -516,7 +521,7 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 
     public function getDebugInfo()
     {
-        return array (  499 => 265,  495 => 264,  491 => 263,  478 => 253,  474 => 252,  469 => 250,  463 => 247,  458 => 245,  454 => 244,  450 => 243,  446 => 242,  441 => 240,  437 => 239,  432 => 237,  427 => 235,  422 => 233,  417 => 231,  412 => 229,  400 => 227,  388 => 188,  379 => 23,  375 => 22,  371 => 21,  367 => 20,  363 => 19,  359 => 18,  355 => 17,  351 => 16,  347 => 15,  343 => 14,  339 => 13,  334 => 12,  327 => 11,  317 => 267,  315 => 227,  275 => 189,  273 => 188,  259 => 176,  252 => 174,  246 => 170,  235 => 168,  232 => 167,  228 => 166,  223 => 163,  221 => 162,  217 => 161,  201 => 159,  198 => 158,  194 => 157,  162 => 128,  57 => 25,  55 => 11,  43 => 1,);
+        return array (  504 => 267,  500 => 266,  496 => 265,  483 => 255,  479 => 254,  474 => 252,  468 => 249,  463 => 247,  459 => 246,  455 => 245,  451 => 244,  446 => 242,  442 => 241,  437 => 239,  432 => 237,  427 => 235,  422 => 233,  417 => 231,  405 => 229,  393 => 190,  384 => 23,  380 => 22,  376 => 21,  372 => 20,  368 => 19,  364 => 18,  360 => 17,  356 => 16,  352 => 15,  348 => 14,  344 => 13,  339 => 12,  332 => 11,  322 => 269,  320 => 229,  280 => 191,  278 => 190,  264 => 178,  257 => 176,  251 => 172,  240 => 170,  237 => 169,  233 => 168,  228 => 165,  226 => 164,  222 => 163,  206 => 161,  203 => 160,  199 => 159,  167 => 130,  146 => 112,  57 => 25,  55 => 11,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -557,7 +562,9 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t<!-- navbar -->
 \t\t\t<!-- ============================================================== -->
 \t\t\t\t<div class=\"dashboard-header\"> <nav class=\"navbar navbar-expand-lg bg-white fixed-top\">
-\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">Reality Bahrain</a>
+\t\t\t\t\t<a class=\"navbar-brand\" href=\"#\">
+\t\t\t\t\t<img src=\"http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/images/logo.png\" style=\"width: 23%;\">
+\t\t\t\t\t</a>
 \t\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t\t</button>
@@ -630,7 +637,7 @@ class __TwigTemplate_b0f137041475419990eb4c237fa60f5b2edceb39f86bd0e4406e06f0ae4
 \t\t\t\t\t\t\t\t\t<li class=\"connection-list\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 \">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/application/1/profile\" class=\"connection-item\"><img src=\"https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png\" alt=\"\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ server_path }}/application/1/profile\" class=\"connection-item\"><img src=\"https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png\" alt=\"\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span>Profile</span>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t</div>

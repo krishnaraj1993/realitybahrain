@@ -2,8 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\ApplicationUsers;
-use App\Entity\Users;
+use App\Entity\{Users,UserPlan,ApplicationUsers};
 use App\Security\AppAuthenticationAuthenticator;
 use App\Service\TableMakerService;
 use App\Service\UserFunctionService;
@@ -21,6 +20,10 @@ class AgentController extends AbstractController
      */
     public function index($id, TableMakerService $tableGenerate): Response
     {
+        $twig = $this->container->get('twig');
+        $globals = $twig->getGlobals();
+        $sever_path = $globals['server_path'];
+
         $repository = $this->getDoctrine()->getRepository(ApplicationUsers::class);
         $userList = $repository->listUsers('ROLE_AGENT', $id);
         $tableGenerate->tableHeader = array('First Name', 'Last Name', 'Email', 'Mobile Number', 'Status');
@@ -28,13 +31,16 @@ class AgentController extends AbstractController
         $actionsList = [];
         foreach ($userList as $key => $value) {
             $userArry[] = array(
-                $value['firstname'] => array('type'=>'text', 'name' => ucfirst($value['firstname']), 'link' => '' . $value['id'] . '/dashboard'),
-                $value['lastname'] => array('type'=>'text', 'name' => $value['lastname']),
-                $value['userId']['email'] => array('type'=>'text', 'name' => $value['userId']['email']),
-                $value['mobilenumber'] => array('type'=>'text', 'name' => $value['mobilenumber']),
-                $value['status'] == '1' ? 'ACTIVE' : 'INACTIVE' => array('type'=>'text', 'name' => $value['status'] == '1' ? 'ACTIVE' : 'INACTIVE'),
+                $value['firstname'] => array('type' => 'text', 'name' => ucfirst($value['firstname']), 'link' => '' . $value['id'] . '/dashboard'),
+                $value['lastname'] => array('type' => 'text', 'name' => $value['lastname']),
+                $value['userId']['email'] => array('type' => 'text', 'name' => $value['userId']['email']),
+                $value['mobilenumber'] => array('type' => 'text', 'name' => $value['mobilenumber']),
+                "status_check" => array('type' => 'checkbox', 'name' => 'status', 'id' => $value['id'], 'css' => 'class="agency_activitaion"', 'checked' => $value['status']),
             );
-            $actionsList[] = array('Update' => array('name' => 'success', 'link' => '/application/new-users?id=' . $value['id']), 'Delete' => array('name' => 'danger', 'link' => '#'));
+            $actionsList[] = array(
+                'Update' => array('name' => 'success', 'link' => '/application/new-users?id=' . $value['id']),
+                'Delete' => array('type' => 'button', 'name' => 'danger deleteUser-btn', 'custom' => 'data-id="' . $value['id'] . '"', 'link' => '#'),
+            );
         }
 
         $tableGenerate->tableBody = $userArry;
@@ -42,7 +48,8 @@ class AgentController extends AbstractController
 
         $content = $tableGenerate->tableRender();
         return $this->render('agent/index.html.twig', [
-            'tableData' => $content, 'agent' => $id,
+            'tableData' => $content,
+            'agent' => $id,
         ]);
     }
 
@@ -105,11 +112,13 @@ class AgentController extends AbstractController
         } catch (\Exception $e) {
 
         }
+        $planList = $this->getDoctrine()->getRepository(UserPlan::class)->getAll();
         return $this->render('agency/newUser.html.twig', [
             'registrationForm' => '',
             'role' => 'ROLE_AGENT',
             'id' => $id,
-            'data'=>$data,
+            'data' => $data,
+            'plans' => $planList,
         ]);
     }
 

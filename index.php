@@ -1,99 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href="css/all.css" rel="stylesheet">
-  <!-- Owl Carousel CSS -->
-  <link href="css/owl.carousel.css" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
-    rel="stylesheet">
-  <link href="css/animate.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/nice-select.css">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/slick.css">
-  <title>RealHomes Modern &ndash; Page 3 &ndash; Simply an awesome real estate website</title>
-</head>
-
-<body>
-  <!--Topbar Start-->
-  <div>
-    <div class="topbar-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-4">
-            <ul class="social_media style_none">
-              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-lg-6 col-md-8">
-            <div class="top_right">
-              <div class="topbar_phone">
-                <a href="tel://1-800-555-1234"><i class="fas fa-phone-alt" aria-hidden="true"></i> 1-800-555-1234
-                </a></div>
-              <div class="topbar_login log">
-                <a href="login.html"> Login</a>
-              </div>
-              <div class="topbar_login">
-                <a href="register.html"> Register</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Topbar End-->
-
-    <!--Header Start-->
-    <div class="header-wrap wow fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 navbar navbar-expand-lg navbar-light header_logo">
-            <div class="header_logo"><a href="index.html"><img alt="" src="images/logo.png"></a></div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
-                class="navbar-toggler-icon"></span> </button>
-          </div>
-          <div class="col-lg-9">
-            <nav class="navbar navbar-expand-lg navbar-light"> <a class="navbar-brand" href="#">Navbar</a>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <button class="close-toggler" type="button" data-toggle="offcanvas"> <span><i
-                      class="fas fa-times-circle" aria-hidden="true"></i></span> </button>
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active"><a class="nav-link" href="index.html"> Home </a> </li>
-                  <li class="nav-item"><a class="nav-link" href="#.">Latest listings</a> </li>
-                  <li class="nav-item"><a class="nav-link" href="agencies.html">Agencies</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#.">Investment</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#.">New Developments </a> </li>
-
-                  <li class="nav-item"><a class="nav-link" href="#">Guides<span class="caret"><i
-                          class="fas fa-caret-down"></i></span></a> <i class="fas fa-caret-down"></i>
-                    <ul class="submenu">
-                      <li><a href="agents.html">Building Regulation Guides</a></li>
-                      <li><a href="pricing.html">RERA Regulations</a></li>
-                      <li><a href="javascript:;">Market Intelligence</a></li>
-                      <li><a href="javascript:;">Property Prices</a></li>
-                      <li><a href="javascript:;">Trends</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item"><a class="nav-link" href="contact.html"> Contact Us</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Header End-->
+<?php include('config/header.php'); ?>
 
     <!--slider start-->
     <div class="slider-wrap wow fadeInUp">
@@ -102,7 +7,7 @@
           <h1>Find Property Sale or Rent</h1>
           <p>From as low as $10 per day with limited time offer discounts.</p>
             <div id="exTab1" class="container">
-              <ul class="nav nav-pills">
+            <ul  class="nav nav-pills">
                 <li> <a href="#rentProperty" class="active" data-toggle="tab">Rent Property</a> </li>
                 <li><a href="#saleProperty" data-toggle="tab">Sale Property</a> </li>
               </ul>
@@ -291,6 +196,153 @@
     </div>
     <!--Buy and Sell Start-->
 
+
+<!--Properties rent Start-->
+<div class="property-wrap property_rent wow fadeInUp" >
+  <div class="container">
+    <div class="title">
+      <h1>Recent listing</h1>
+    </div>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides">
+
+      <img src="images/slide3.jpg" class="slideImage" />
+      <div class="slideDetails" >
+      <p class="featureTitle">Featured</p>
+      <h3><a href="#.">Home in Merrick way</a></h3>
+      <p>Enchanting three bedroom, three bath home with spacious one bedroom, one bath cabana, in-laws quarters. Charming living area features fireplace</p>
+      <table class="featureTable">
+        <thead>
+          <th>Bedrooms</th>
+          <th>Bathrooms</th>
+          <th>Area</th>
+        </thead>
+        <tbody>
+          <tr>
+          <td>
+            <div class="flexContainer">
+              <div><img alt="" src="images/bedroom_icon.png"></div>
+              <div>3</div>
+            </div>
+          </td>
+
+          <td>
+            <div class="flexContainer">
+              <div><img alt="" src="images/bathroom_icon.png"></div>
+              <div>3</div>
+            </div>
+          </td>
+
+          <td>
+            <div class="flexContainer">
+              <div><img alt="" src="images/area_icon.png"></div>
+              <div>4300 Sq Ft</div>
+            </div>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 class="priceHeading">For Sale</h4>
+        <p class="price">BHD 488.00</p>
+        </div>
+      </div>
+
+      <div class="mySlides">
+      <img src="images/slide2.jpg" class="slideImage" />
+      <div class="slideDetails" >
+        <p class="featureTitle">Featured</p>
+        <h3><a href="#.">Villa in Coral Gables</a></h3>
+        <p>Enjoy serenity of Deering Bay whole day from this spectacular North and South, three bedroom, three and a half bath</p>
+        <table class="featureTable">
+          <thead>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Area</th>
+          </thead>
+          <tbody>
+            <tr>
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/bedroom_icon.png"></div>
+                <div>3</div>
+              </div>
+            </td>
+
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/bathroom_icon.png"></div>
+                <div>3.5</div>
+              </div>
+            </td>
+
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/area_icon.png"></div>
+                <div>3500 Sq Ft</div>
+              </div>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4 class="priceHeading">For Sale</h4>
+        <p class="price">BHD 488.00</p>
+      </div>
+    </div>
+
+      <div class="mySlides">
+      <img src="images/slide1.jpg" class="slideImage" />
+      <div class="slideDetails" >
+        <p class="featureTitle">Featured</p>
+        <h3><a href="#.">Villa on Grand Avenue</a></h3>
+        <p>Enchanting three bedroom, three bath home with spacious one bedroom, one bath cabana, in-laws quarter. charming living area features fireplace...</p>
+        <table class="featureTable">
+          <thead>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Area</th>
+          </thead>
+          <tbody>
+            <tr>
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/bedroom_icon.png"></div>
+                <div>4</div>
+              </div>
+            </td>
+
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/bathroom_icon.png"></div>
+                <div>4</div>
+              </div>
+            </td>
+
+            <td>
+              <div class="flexContainer">
+                <div><img alt="" src="images/area_icon.png"></div>
+                <div>9500 Sq Ft</div>
+              </div>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4 class="priceHeading">For Rent</h4>
+        <p class="price">BHD 400.00 Monthly</p>
+      </div>
+    </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+
+  </div>
+</div>
+<!--Properties End-->
+
+
     <!-- popular start -->
     <section class="popular_wrap wow fadeInUp">
       <div class="container">
@@ -330,39 +382,6 @@
     </section>
 
     <!-- popular end -->
-
-    <!--Properties rent Start-->
-    <div class="property-wrap property_rent wow fadeInUp">
-      <div class="container">
-        <div class="title">
-          <h1>Recent listing</h1>
-        </div>
-
-        <!--Row Start-->
-        <ul class="row">
-          <!--col-lg-4 Start-->
-
-          <!--col-lg-4 End-->
-
-          <!--col-lg-4 Start-->
-
-          <!--col-lg-4 End-->
-
-          <!--col-lg-4 Start-->
-          <li class="col-lg-12">
-            <img src="images/demobg.png" width="100%" />
-          </li>
-          <!--col-lg-4 End-->
-        </ul>
-        <!--Row End-->
-
-      </div>
-    </div>
-    <!--Properties End-->
-
-
-
-
 
     <!--Properties rent Start-->
     <div class="property-wrap selectbyLocation wow fadeInUp">
@@ -432,14 +451,30 @@
 
 
 
+<!-- perfect home start -->
+<section class="perfect_home_wrap wow fadeInUp">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="perfect_text">
+          <h1>Search properties for sale and to rent</h1>
+          <span>Find all kind of properties in one place</span> </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="readmore"><a href="#">Send enquiry</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- perfect home end -->
 
 
-    <!--
+
 <div class="partners">
   <div class="container">
-      <h4>Brands and Partners</h4>
+      <h1>Featured agencies</h1>
       <div class="slick-slider-area">
-          <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
+          <div class="row slick-carousel" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
               <div class="slick-slide-item"><img src="images/propertyImg01.jpg" alt="brand" class="img-fluid"></div>
               <div class="slick-slide-item"><img src="images/propertyImg02.jpg" alt="brand" class="img-fluid"></div>
               <div class="slick-slide-item"><img src="images/propertyImg03.jpg" alt="brand" class="img-fluid"></div>
@@ -457,32 +492,13 @@
           </div>
       </div>
   </div>
-</div> -->
-
+</div>
 
 
 
 
     </section>
 
-
-    <!-- perfect home start -->
-    <section class="perfect_home_wrap wow fadeInUp">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="perfect_text">
-              <h1>Search properties for sale and to rent</h1>
-              <span>Find all kind of properties in one place</span>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="readmore"><a href="#">Send enquiry</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- perfect home end -->
 
 
     <!--Footer Start-->
@@ -491,7 +507,7 @@
         <div class="footer-upper">
           <div class="row footerSocialIcon">
             <div class="col-md-6">
-              <a href="index.html"> <img alt="" src="images/logo.png"> </a>
+              <a href="index.php"> <img alt="" src="images/logo.png"> </a>
             </div>
 
             <div class="col-md-6">
@@ -525,13 +541,9 @@
               <div class="footer-widget contact">
                 <h3 class="title">Contact Info</h3>
                 <ul class="footer-adress">
-                  <li class="footer_address"> <i class="fas fa-map-signs"></i> <span>Plat Ni and Address of realty
-                      bahrain
-                      here</span> </li>
-                  <li class="footer_email"> <i class="fas fa-envelope" aria-hidden="true"></i> <span><a
-                        href="mailto:info@realestate.com"> info@realestate.com </a></span> </li>
-                  <li class="footer_phone"> <i class="fas fa-phone-alt"></i> <span><a href="tel:1-800-555-1234 ">
-                        1-800-555-1234 </a></span> </li>
+                <li class="footer_address"> <i class="fas fa-map-signs"></i> <span>Plat Ni and Address of realty bahrain here</span> </li>
+              <li class="footer_email"> <i class="fas fa-envelope" aria-hidden="true"></i> <span><a href="mailto:info@realestate.com"> info@realestate.com </a></span> </li>
+              <li class="footer_phone"> <i class="fas fa-phone-alt"></i> <span><a href="tel:1-800-555-1234 "> 1-800-555-1234 </a></span> </li>
                 </ul>
 
               </div>
@@ -565,16 +577,7 @@
       </div>
     </footer>
     <!--Footer End-->
-    <script>
-      /*var app = angular.module('realtybahrainApp', []);
-      app.controller('realtybahrainCtrl', function ($scope, $http) {
-        $http.get("http://localhost:8000/api/properties")
-          .then(function (response) {
-            console.log(response.data.data);
-            $scope.properties = response.data.data;
-          });
-      });*/
-    </script>
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
@@ -594,7 +597,74 @@
 
     <script src="js/script.js"></script>
     <script src="js/slick.min.js"></script>
-  </div>
+    <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    // var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      
+        slides[i].style.display = "none"
+       
+    }
+   
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    slides[slideIndex-1].style.display = "block";  
+    // dots[slideIndex-1].className += " active";
+  }
+
+
+     // Slick Sliders for  Brands and Partners
+     $('.slick-carousel').each(function () {
+    var slider = $(this);
+    $(this).slick({
+        infinite: true,
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        autoplay:true
+    });
+
+    $(this).closest('.slick-slider-area').find('.slick-prev').on("click", function () {
+        slider.slick('slickPrev');
+    });
+    $(this).closest('.slick-slider-area').find('.slick-next').on("click", function () {
+        slider.slick('slickNext');
+    });
+});
+
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+  </script>
+  
 </body>
 
 </html>

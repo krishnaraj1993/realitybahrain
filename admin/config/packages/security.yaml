@@ -24,6 +24,7 @@ security:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
+                target: http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/login
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

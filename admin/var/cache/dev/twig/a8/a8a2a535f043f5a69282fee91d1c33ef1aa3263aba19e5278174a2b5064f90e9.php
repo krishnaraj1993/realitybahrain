@@ -72,22 +72,36 @@ class __TwigTemplate_a364c39f5e1190d497bb615edeb0cd47eed6fc10665c057aed84b4040e7
 
         // line 7
         echo "
-\t<br/>
+\t<div class=\"row\">
+\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t<div class=\"page-header\">
+\t\t\t\t<h3 class=\"mb-2\">Ageents</h3>
+\t\t\t\t<div class=\"page-breadcrumb\">
+\t\t\t\t\t<nav aria-label=\"breadcrumb\">
+\t\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"breadcrumb-link\">Dashboard</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Agent List</li>
+\t\t\t\t\t\t</ol>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"body-wrapper\" style=\"background-color: white;padding: 22px;\">
 \t\t<nav class=\"navbar navbar-expand-sm \" style=\"background-color: #e1e1e1 !important;\">
 \t\t\t<ul class=\"navbar-nav\">
 \t\t\t\t<li class=\"nav-item\" style=\"border-bottom: none;\">
 \t\t\t\t\t<a href=\"";
-        // line 13
-        echo twig_escape_filter($this->env, (isset($context["agent"]) || array_key_exists("agent", $context) ? $context["agent"] : (function () { throw new RuntimeError('Variable "agent" does not exist.', 13, $this->source); })()), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, (isset($context["agent"]) || array_key_exists("agent", $context) ? $context["agent"] : (function () { throw new RuntimeError('Variable "agent" does not exist.', 29, $this->source); })()), "html", null, true);
         echo "/new-users\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Users</button>
 \t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 16, $this->source); })()), "html", null, true);
-        echo "/application/agency/";
-        echo twig_escape_filter($this->env, (isset($context["agent"]) || array_key_exists("agent", $context) ? $context["agent"] : (function () { throw new RuntimeError('Variable "agent" does not exist.', 16, $this->source); })()), "html", null, true);
+\t\t\t\t\t<a href=\"/application/agency/";
+        // line 32
+        echo twig_escape_filter($this->env, (isset($context["agent"]) || array_key_exists("agent", $context) ? $context["agent"] : (function () { throw new RuntimeError('Variable "agent" does not exist.', 32, $this->source); })()), "html", null, true);
         echo "/dashboard\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">View My Dashboard</button>
 \t\t\t\t\t</a>
@@ -95,10 +109,13 @@ class __TwigTemplate_a364c39f5e1190d497bb615edeb0cd47eed6fc10665c057aed84b4040e7
 
 \t\t\t</ul>
 \t\t</nav>
-
+\t\t<input type=\"hidden\" value=\"";
+        // line 39
+        echo twig_escape_filter($this->env, (isset($context["server_path"]) || array_key_exists("server_path", $context) ? $context["server_path"] : (function () { throw new RuntimeError('Variable "server_path" does not exist.', 39, $this->source); })()), "html", null, true);
+        echo "\" id=\"server_path\">
 \t\t";
-        // line 24
-        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 24, $this->source); })());
+        // line 40
+        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 40, $this->source); })());
         echo "
 
 \t\t<div class=\"pagination\" style=\"background-color: whitesmoke;\">
@@ -130,7 +147,7 @@ class __TwigTemplate_a364c39f5e1190d497bb615edeb0cd47eed6fc10665c057aed84b4040e7
 
     public function getDebugInfo()
     {
-        return array (  101 => 24,  88 => 16,  82 => 13,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
+        return array (  118 => 40,  114 => 39,  104 => 32,  98 => 29,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -142,7 +159,23 @@ class __TwigTemplate_a364c39f5e1190d497bb615edeb0cd47eed6fc10665c057aed84b4040e7
 
 {% block body %}
 
-\t<br/>
+\t<div class=\"row\">
+\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t<div class=\"page-header\">
+\t\t\t\t<h3 class=\"mb-2\">Ageents</h3>
+\t\t\t\t<div class=\"page-breadcrumb\">
+\t\t\t\t\t<nav aria-label=\"breadcrumb\">
+\t\t\t\t\t\t<ol class=\"breadcrumb\">
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item\">
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"breadcrumb-link\">Dashboard</a>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Agent List</li>
+\t\t\t\t\t\t</ol>
+\t\t\t\t\t</nav>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"body-wrapper\" style=\"background-color: white;padding: 22px;\">
 \t\t<nav class=\"navbar navbar-expand-sm \" style=\"background-color: #e1e1e1 !important;\">
 \t\t\t<ul class=\"navbar-nav\">
@@ -150,14 +183,14 @@ class __TwigTemplate_a364c39f5e1190d497bb615edeb0cd47eed6fc10665c057aed84b4040e7
 \t\t\t\t\t<a href=\"{{agent}}/new-users\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">Add Users</button>
 \t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"{{ server_path }}/application/agency/{{agent}}/dashboard\">
+\t\t\t\t\t<a href=\"/application/agency/{{agent}}/dashboard\">
 \t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-primary\">View My Dashboard</button>
 \t\t\t\t\t</a>
 \t\t\t\t</li>
 
 \t\t\t</ul>
 \t\t</nav>
-
+\t\t<input type=\"hidden\" value=\"{{ server_path }}\" id=\"server_path\">
 \t\t{{ tableData|raw }}
 
 \t\t<div class=\"pagination\" style=\"background-color: whitesmoke;\">

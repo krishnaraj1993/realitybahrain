@@ -144,6 +144,11 @@ class Property
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="string", length=15)
+     */
+    private $listingFor;
+
     public function __construct()
     {
         $this->nearBy = new ArrayCollection();
@@ -501,6 +506,18 @@ class Property
     public function setStatus(int $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getListingFor(): ?string
+    {
+        return $this->listingFor;
+    }
+
+    public function setListingFor(string $listingFor): self
+    {
+        $this->listingFor = $listingFor;
 
         return $this;
     }

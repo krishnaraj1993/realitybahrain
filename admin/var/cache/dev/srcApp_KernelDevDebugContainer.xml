@@ -228,6 +228,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\Api\PropertyController"/>
       </call>
     </service>
+    <service id="App\Controller\Api\UsersController" class="App\Controller\Api\UsersController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\Api\UsersController"/>
+      </call>
+    </service>
     <service id="App\Controller\ApplicationUsersController" class="App\Controller\ApplicationUsersController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -325,6 +332,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\PropertyTypeRepository" class="App\Repository\PropertyTypeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UserAddonsRepository" class="App\Repository\UserAddonsRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -2414,7 +2425,7 @@
     </service>
     <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
       <argument type="service" id="security.http_utils"/>
-      <argument>/</argument>
+      <argument>http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/login</argument>
     </service>
     <service id="security.authentication.provider.guard.main" class="Symfony\Component\Security\Guard\Provider\GuardAuthenticationProvider" public="false">
       <argument type="iterator">
@@ -2903,7 +2914,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.Vv8mNDu"/>
+      <argument type="service" id=".service_locator.dOAxpgt"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -3261,6 +3272,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\PropertyController" class="App\Controller\Api\PropertyController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\PropertyController" class="App\Controller\Api\PropertyController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Api\PropertyController" class="App\Controller\Api\PropertyController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Api\UsersController" class="App\Controller\Api\UsersController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Api\UsersController" class="App\Controller\Api\UsersController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Api\UsersController" class="App\Controller\Api\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ApplicationUsersController" class="App\Controller\ApplicationUsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ApplicationUsersController" class="App\Controller\ApplicationUsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ApplicationUsersController" class="App\Controller\ApplicationUsersController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3306,6 +3320,8 @@
     <service id=".abstract.instanceof.App\Repository\PropertyStatusRepository" class="App\Repository\PropertyStatusRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PropertyTypeRepository" class="App\Repository\PropertyTypeRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PropertyTypeRepository" class="App\Repository\PropertyTypeRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserAddonsRepository" class="App\Repository\UserAddonsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UserAddonsRepository" class="App\Repository\UserAddonsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserPlanRepository" class="App\Repository\UserPlanRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserPlanRepository" class="App\Repository\UserPlanRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" abstract="true"/>
@@ -3738,7 +3754,7 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.Vv8mNDu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.dOAxpgt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AddressRepository" type="service" id="App\Repository\AddressRepository"/>
@@ -3752,6 +3768,7 @@
         <argument key="App\Repository\PropertyRepository" type="service" id="App\Repository\PropertyRepository"/>
         <argument key="App\Repository\PropertyStatusRepository" type="service" id="App\Repository\PropertyStatusRepository"/>
         <argument key="App\Repository\PropertyTypeRepository" type="service" id="App\Repository\PropertyTypeRepository"/>
+        <argument key="App\Repository\UserAddonsRepository" type="service" id="App\Repository\UserAddonsRepository"/>
         <argument key="App\Repository\UserPlanRepository" type="service" id="App\Repository\UserPlanRepository"/>
         <argument key="App\Repository\UsersRepository" type="service" id="App\Repository\UsersRepository"/>
         <argument key="App\Repository\VisitorsRepository" type="service" id="App\Repository\VisitorsRepository"/>
@@ -3790,6 +3807,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\Api\PropertyController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Api\PropertyController"/>
       <argument>App\Controller\Api\PropertyController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\Api\UsersController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Api\UsersController"/>
+      <argument>App\Controller\Api\UsersController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>

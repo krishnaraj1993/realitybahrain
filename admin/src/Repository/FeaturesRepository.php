@@ -4,8 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Features;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\Query;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method Features|null find($id, $lockMode = null, $lockVersion = null)
@@ -23,6 +23,16 @@ class FeaturesRepository extends ServiceEntityRepository
     public function feathAll()
     {
         return $this->createQueryBuilder('p')
+            ->getQuery()
+            ->getResult(Query::HYDRATE_ARRAY);
+    }
+
+    public function findListByIds($listId)
+    {
+        $listId = explode(',',$listId);
+        return $this->createQueryBuilder('f')
+            ->andWhere('f.id IN (:list)')
+            ->setParameter('list', $listId)
             ->getQuery()
             ->getResult(Query::HYDRATE_ARRAY);
     }

@@ -3,6 +3,7 @@
 namespace App\Controller\Api;
 
 use App\Entity\ApplicationAssets;
+use App\Entity\Features;
 use App\Entity\Property;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,6 +23,7 @@ class PropertyController extends AbstractController
         $repository = $this->getDoctrine()->getRepository(Property::class)->getFilterData(array('pd.webFeaturedListing' => 1));
         $property = [];
         foreach ($repository as $key => $value) {
+            $value = $value[0];
             $assets = $this->getDoctrine()->getRepository(ApplicationAssets::class)->findBy(['property' => $value['id'], 'slno' => 1]);
             if (!empty($assets)) {
                 $value['assets'] = $assets[0]->getUrl();
@@ -63,22 +65,23 @@ class PropertyController extends AbstractController
         $advance = empty($propertyPrice) ? null :
         array(
             'btw' => array(
-                'p.value' => explode('-', $propertyPrice),
+                'p.value' => explode('-', trim($propertyPrice)),
             ),
         );
         $repository = $this->getDoctrine()->getRepository(Property::class)
             ->getFilterData(
                 array(
-                    'p.location' => $origin,
-                    'p.bedRooms' => $propertyBedrooms,
-                    'p.BathRooms' => $propertyBathrooms,
-                    'pt.name' => $propertyType,
+                    'p.location' => trim($origin),
+                    'p.bedRooms' => trim($propertyBedrooms),
+                    'p.BathRooms' => trim($propertyBathrooms),
+                    'pt.name' => trim($propertyType),
                 ),
                 'search',
                 $advance
             );
         $property = [];
         foreach ($repository as $key => $value) {
+            $value = $value[0];
             $assets = $this->getDoctrine()->getRepository(ApplicationAssets::class)->findBy(['property' => $value['id'], 'slno' => 1]);
             if (!empty($assets)) {
                 $value['assets'] = $assets[0]->getUrl();
@@ -88,4 +91,28 @@ class PropertyController extends AbstractController
         return $response = new JsonResponse(['data' => $property]);
     }
 
+    /**
+     * @Route("api/properties/details", name="single_property")
+     */
+    public function singleProduct(Request $request): Response
+    {
+        $param = $request->query->all();
+        $id = $param['id'];
+        $property = $this->getDoctrine()->getRepository(Property::class)
+            ->getFilterData(
+                array(
+                    'p.id' => $id,
+                ),
+                'search',
+                null
+            );
+        $features = $property[0][0]['features'] ?? null;
+        $propertyFeatures = $this->getDoctrine()->getRepository(Features::class)->findListByIds($features);
+        $propertyAssets = $this->getDoctrine()->getRepository(ApplicationAssets::class)->feathByPropertyId($id);
+        return $response = new JsonResponse([
+            'data' => $property[0],
+            'assets' => $propertyAssets,
+            'features' => $propertyFeatures,
+        ]);
+    }
 }

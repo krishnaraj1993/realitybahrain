@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!
+{% block title %}configuration
 {% endblock %}
 
 {% block body %}
@@ -18,25 +18,127 @@
 		</ul>
 		<div class="tab-content" id="myTabContent3">
 			<div class="tab-pane fade show active" id="home-vertical" role="tabpanel" aria-labelledby="home-vertical-tab">
-				<p class="lead">
-					All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-				</p>
-				<p>Phasellus non ante gravida, ultricies neque a, fermentum leo. Etiam ornare enim arcu, at venenatis odio mollis quis. Mauris fermentum elementum ligula in efficitur. Aliquam id congue lorem. Proin consectetur feugiasse platea dictumst. Pellentesque sed justo aliquet, posuere sem nec, elementum ante.</p>
-				<a href="#" class="btn btn-secondary">Go somewhere</a>
+				<form class="form-inline" method="post" style="background-color: #d0cfcf;padding: 4px;">
+					<div class="form-group">
+						<input type="text" name="name" placeholder="Name" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="description" placeholder="description" class="form-control">
+					</div>
+					<input type="hidden" name="action" value="status">
+					<button type="submit" class="btn btn-primary btn-sm" style="margin-left: 10%;">Save Data</button>
+				</form>
+				<div class="table-responsive">
+					<table class="table table-striped table-bordered first dataTable">
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Action</th>
+						</tr>
+						{% for status in propertyStatus %}
+							<tr>
+								<td>{{ status.name }}</td>
+								<td>{{ status.description }}</td>
+								<td>
+									<div class="btn-group btn-group-toggle" data-toggle="buttons">
+										<label class="btn btn-primary btn-sm">
+											<input type="radio" name="options" id="option2">
+											Update
+										</label>
+										<a href="status/{{ status.id }}/delete" class="btn btn-danger btn-sm">
+											<input type="radio" name="options" id="option3">
+											Delete
+										</a>
+									</div>
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
 			</div>
 			<div class="tab-pane fade" id="profile-vertical" role="tabpanel" aria-labelledby="profile-vertical-tab">
-				<h3>Tab Heading Vertical Title</h3>
-				<p>Nullam et tellus ac ligula condimentum sodales. Aenean tincidunt viverra suscipit. Maecenas id molestie est, a commodo nisi. Quisque fringilla turpis nec elit eleifend vestibulum. Aliquam sed purus in odio ullamcorper congue consectetur in neque. Aenean sem ex, tempor et auctor sed, congue id neque.
-				</p>
-				<p>
-					Fusce a eros pellentesque, ultricies urna nec, consectetur dolor. Nam dapibus scelerisque risus, a commodo mi tempus eu.</p>
+				<div class="table-responsive">
+					<form class="form-inline" method="post" style="background-color: #d0cfcf;padding: 4px;">
+						<div class="form-group">
+							<input type="text" name="name" placeholder="Name" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="description" placeholder="description" class="form-control">
+						</div>
+						<input type="hidden" name="action" value="ewa">
+						<button type="submit" class="btn btn-primary btn-sm" style="margin-left: 10%;">Save Data</button>
+					</form>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered first dataTable">
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Action</th>
+							</tr>
+							{% for data in ewa %}
+								<tr>
+									<td>{{ data.name }}</td>
+									<td>{{ data.description }}</td>
+									<td>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label class="btn btn-primary btn-sm">
+												<input type="radio" name="options" id="option2">
+												Update
+											</label>
+											<label class="btn btn-danger btn-sm">
+												<input type="radio" name="options" id="option3">
+												Delete
+											</label>
+										</div>
+									</td>
+								</tr>
+							{% endfor %}
+						</table>
+					</div>
+				</div>
 			</div>
 			<div class="tab-pane fade" id="contact-vertical" role="tabpanel" aria-labelledby="contact-vertical-tab">
-				<h3>Tab Heading Vertical Title</h3>
-				<p>Vivamus pellentesque vestibulum lectus vitae auctor. Maecenas eu sodales arcu. Fusce lobortis, libero ac cursus feugiat, nibh ex ultricies tortor, id dictum massa nisl ac nisi. Fusce a eros pellentesque, ultricies urna nec, consectetur dolor. Nam dapibus scelerisque risus, a commodo mi tempus eu.</p>
-				<p>
-					Fusce a eros pellentesque, ultricies urna nec, consectetur dolor. Nam dapibus scelerisque risus, a commodo mi tempus eu.</p>
+				<div class="table-responsive">
+					<div class="table-responsive">
+						<form class="form-inline" method="post" style="background-color: #d0cfcf;padding: 4px;">
+							<div class="form-group">
+								<input type="text" name="name" placeholder="Name" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="text" name="description" placeholder="description" class="form-control">
+							</div>
+							<input type="hidden" name="action" value="type">
+							<button type="submit" class="btn btn-primary btn-sm" style="margin-left: 10%;">Save Data</button>
+						</form>
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered first dataTable">
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Action</th>
+								</tr>
+								{% for type in propertyType %}
+									<tr>
+										<td>{{ type.name }}</td>
+										<td>{{ type.description }}</td>
+										<td>
+											<div class="btn-group btn-group-toggle" data-toggle="buttons">
+												<label class="btn btn-primary btn-sm">
+													<input type="radio" name="options" id="option2">
+													Update
+												</label>
+												<label class="btn btn-danger btn-sm">
+													<input type="radio" name="options" id="option3">
+													Delete
+												</label>
+											</div>
+										</td>
+									</tr>
+								{% endfor %}
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-{% endblock %}
+	{% endblock %}

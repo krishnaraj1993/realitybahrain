@@ -68,9 +68,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.activate-btn').click(function () {
         var obj = $(this).closest('tr');
-        console.log(obj);
         $.ajax({
-            url: "update-plan/" + $(this).data('id'), success: function (result) {
+            url: $('#server_path').val() + "/update-plan/" + $(this).data('id'), success: function (result) {
                 swal("Update plan request sent successfully");
                 $('.dataTable tr').removeAttr('style');
                 obj.css('background-color', '#b1d2b1');
@@ -80,7 +79,7 @@ $(document).ready(function () {
     });
     $('#addToFeaturedList').click(function () {
         $.ajax({
-            url: "/application/add-to-featured-list/" + $(this).data('id'), success: function (result) {
+            url: $('#server_path').val() + "/application/add-to-featured-list/" + $(this).data('id'), success: function (result) {
                 swal("plan updated successfully");
                 $('.dataTable tr').removeAttr('style');
                 obj.css('background-color', '#b1d2b1');
@@ -90,8 +89,10 @@ $(document).ready(function () {
     });
     $('.delete-assets').click(function () {
         var obj = $(this);
+        var server_api = $('#server_path').val() + "/application/delete-assets/" + $(this).data('id');
+        console.log(server_api);
         $.ajax({
-            url: "/application/delete-assets/" + $(this).data('id'), success: function (result) {
+            url: server_api, success: function (result) {
                 swal("Asset deleted successfully");
                 $(this).parent('td').parent('tr').remove();
             }
@@ -99,8 +100,19 @@ $(document).ready(function () {
     });
 
     $('.product_activitaion').change(function () {
-        var status = $(this).prop("checked")?1:0;
-        var urlstring = "/api/properties/" + $(this).attr('id')+'/status/'+status;
+        var status = $(this).prop("checked") ? 1 : 0;
+        var id = $(this).attr('id');
+        var urlstring = $('#server_path').val() + "/api/properties/" + id + '/status/' + status;
+        $.ajax({
+            url: urlstring, success: function (result) {
+                swal("Status updated successfully");
+            }
+        });
+    });
+
+    $('.agency_activitaion').change(function () {
+        var status = $(this).prop("checked") ? 1 : 0;
+        var urlstring = $('#server_path').val() + "/api/user/" + $(this).attr('id') + '/status/' + status;
         $.ajax({
             url: urlstring, success: function (result) {
                 swal("Status updated successfully");
@@ -124,12 +136,36 @@ $(document).ready(function () {
     $('.deleteProperty-btn').click(function () {
         var obj = $(this).closest('tr');
         $.ajax({
-            url: "/application/property/" + $(this).data('id') + "/delete", success: function (result) {
+            url: $('#server_path').val() + "/application/property/" + $(this).data('id') + "/delete", success: function (result) {
                 swal("Property deleted successfully");
                 $(this).parent('td').parent('tr').remove();
 
             }
         });
+    });
+    $('.deleteUser-btn').click(function () {
+        var obj = $(this).closest('tr');
+        $.ajax({
+            url: $('#server_path').val() + "/application/user/" + $(this).data('id') + "/delete", success: function (result) {
+                swal("user deleted successfully");
+                $(this).parent('td').parent('tr').remove();
+
+            }
+        });
+    });
+
+    $('#addon-modal-pop-up').click(function () {
+
+    });
+
+    $('.submit-addons').click(function () {
+        var data = '';
+        for ($i = 0; $i <= 8; $i++) {
+            var val = $(".input" + $i).val();
+            var name = $(".input" + $i).attr('name');
+            data = data + '<input type="hidden" id="attr' + name + '" value="' + val + '" name="' + name + '">';
+        }
+        $('#addon-data').html(data);
     });
 });
 
@@ -166,6 +202,12 @@ $(document).ready(function () {
     $(".clickimagePlus").click(function () {
         $('#imageAssets').click();
     });
+
+    $("#imagelists").on("click", ".remove-asset-row", function () {
+        $(this).closest("tr").remove();
+        $('#imageCounts').val(parseInt($('#imageCounts').val()) - 1);
+    });
+
     $("#submitProperty").click(function () {
 
         return;
@@ -200,7 +242,7 @@ function setimage(objFileInput) {
         var fileReader = new FileReader();
         fileReader.onload = function (e) {
             var sl = parseInt($('#imageCounts').val());
-            $('#imagelists tr:last').after('<tr><td>' + (sl + 1) + '</td><td><input type="number" value="' + (sl + 1) + '" style="width: 80%;"  name="assetsnumber[]"/></td><td><img src="' + e.target.result + '" width="100px" height="100px" class="img-fluid mr-3" /><input type="hidden" value="' + e.target.result + '" name="assets[]"></td><td><button type="button" class="btn btn-primary btn-sm">x</button></td></tr>');
+            $('#imagelists tr:last').after('<tr><td>' + (sl + 1) + '</td><td><input type="number" value="' + (sl + 1) + '" style="width: 80%;"  name="assetsnumber[]"/></td><td><img src="' + e.target.result + '" width="100px" height="100px" class="img-fluid mr-3" /><input type="hidden" value="' + e.target.result + '" name="assets[]"></td><td><button type="button" class="btn btn-primary btn-sm remove-asset-row" >x</button></td></tr>');
             //$(".imageList").append('<img src="' + e.target.result + '" width="200px" height="200px" class="img-fluid mr-3" /><input type="hidden" value="' + e.target.result + '" name="assets[]">');
             $('#imageCounts').val(sl + 1);
         }

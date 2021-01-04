@@ -35,6 +35,9 @@ class ApplicationUsersRepository extends ServiceEntityRepository
                 ->setParameter('parent', $id);
         }
 
+        $qry = $qry->andWhere('a.status != :status')
+        ->setParameter('status', StatusConstants::DELETED);
+
         $result = $qry->getQuery()
             ->setMaxResults(5)
             ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);

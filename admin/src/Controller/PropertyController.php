@@ -42,20 +42,24 @@ class PropertyController extends AbstractController
         } else {
             $property = $repository->getAll($requestData);
         }
+        $twig = $this->container->get('twig');
+        $globals = $twig->getGlobals();
+        $sever_path = $globals['server_path'];
+
         $tableGenerate->tableHeader = array('Title', 'Investment', 'Building Name', 'Location', 'Status');
         $propertyArry = [];
         $actionsList = [];
         if (!empty($property)) {
             foreach ($property as $key => $value) {
                 $propertyArry[] = array(
-                    $value['Title'] . "1" => array('type' => 'text', 'name' => ucfirst($value['Title']), 'link' => '/application/property/' . $value['id']),
+                    $value['Title'] . "1" => array('type' => 'text', 'name' => ucfirst($value['Title']), 'link' => $sever_path . '/application/property/' . $value['id']),
                     $value['investment'] . "3" => array('type' => 'text', 'name' => $value['investment']),
                     $value['buildingName'] . "4" => array('type' => 'text', 'name' => $value['buildingName']),
                     $value['location'] . "5" => array('type' => 'text', 'name' => $value['location']),
                     "status_check" => array('type' => 'checkbox', 'name' => 'status', 'id' => $value['id'], 'css' => 'class="product_activitaion"', 'checked' => $value['status']),
                 );
                 $actionsList[] = array(
-                    'Update' => array('type' => 'button', 'name' => 'info', 'link' => '/application/property/' . $value['id'] . '/edit'),
+                    'Update' => array('type' => 'button', 'name' => 'info', 'link' => $sever_path . '/application/property/' . $value['id'] . '/edit'),
                     'Delete' => array('type' => 'button', 'name' => 'danger deleteProperty-btn', 'custom' => 'data-id="' . $value['id'] . '"', 'link' => '#'),
                 );
             }
@@ -110,6 +114,7 @@ class PropertyController extends AbstractController
                 'ptype' => '',
                 'pstatus' => '',
                 'furnishing' => '',
+                'property_for'=>'',
             );
         } catch (\Exception $e) {
             dd($e);
@@ -162,6 +167,7 @@ class PropertyController extends AbstractController
         $property->setCreatedBy($userId);
         $property->setCreatedAt(new \DateTime('now'));
         $property->setMortgage($param['mortgage']);
+        $property->setListingFor($param['property_for']);
         $entityManager->persist($property);
         $entityManager->flush();
         $assets = empty($param['assets']) ? [] : $param['assets'];
@@ -225,9 +231,11 @@ class PropertyController extends AbstractController
 
         foreach ($assetsNumber as $key => $slno) {
             $applicationAssetsSLno = $this->getDoctrine()->getRepository(ApplicationAssets::class)->findOneBy(['id' => $key]);
-            $applicationAssetsSLno->setSlno($slno);
-            $entityManager->persist($applicationAssetsSLno);
-            $entityManager->flush();
+            if ($applicationAssetsSLno instanceof ApplicationAssets) {
+                $applicationAssetsSLno->setSlno($slno);
+                $entityManager->persist($applicationAssetsSLno);
+                $entityManager->flush();
+            }
         }
 
     }

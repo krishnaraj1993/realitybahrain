@@ -75,9 +75,7 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t<div class=\"row\">
 \t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
 \t\t\t<div class=\"page-header\">
-\t\t\t\t<h3 class=\"mb-2\">Reality Bahrain Profile
-\t\t\t\t</h3>
-\t\t\t\t<p class=\"pageheader-text\">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+\t\t\t\t<h3 class=\"mb-2\">Admin Dashboard</h3>
 \t\t\t\t<div class=\"page-breadcrumb\">
 \t\t\t\t\t<nav aria-label=\"breadcrumb\">
 \t\t\t\t\t\t<ol class=\"breadcrumb\">
@@ -106,18 +104,18 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t<div class=\"card\"> <div class=\"card-body\">
 \t\t\t\t\t<div class=\"user-avatar text-center d-block\">
 \t\t\t\t\t\t<img src=\"";
-        // line 40
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 40, $this->source); })()), "image", [], "array", false, false, false, 40)), "html", null, true);
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 38, $this->source); })()), "image", [], "array", false, false, false, 38)), "html", null, true);
         echo "\" alt=\"User Avatar\" class=\"rounded-circle user-avatar-xxl\">
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"text-center\">
 \t\t\t\t\t\t<h2 class=\"font-24 mb-0\">";
-        // line 43
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 43, $this->source); })()), "firstname", [], "array", false, false, false, 43), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 41, $this->source); })()), "firstname", [], "array", false, false, false, 41), "html", null, true);
         echo "</h2>
 \t\t\t\t\t\t<p>";
-        // line 44
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 44, $this->source); })()), "lastname", [], "array", false, false, false, 44), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 42, $this->source); })()), "lastname", [], "array", false, false, false, 42), "html", null, true);
         echo "</p>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -128,32 +126,18 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t<li class=\"mb-2\">
 \t\t\t\t\t\t\t\t<i class=\"fas fa-fw fa-envelope mr-2\"></i>
 \t\t\t\t\t\t\t\t";
-        // line 53
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 53, $this->source); })()), "address", [], "array", false, false, false, 53), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 51, $this->source); })()), "address", [], "array", false, false, false, 51), "html", null, true);
         echo "</li>
 \t\t\t\t\t\t\t<li class=\"mb-0\">
 \t\t\t\t\t\t\t\t<i class=\"fas fa-fw fa-phone mr-2\"></i>
 \t\t\t\t\t\t\t\t";
-        // line 56
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 56, $this->source); })()), "mobilenumber", [], "array", false, false, false, 56), "html", null, true);
+        // line 54
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 54, $this->source); })()), "mobilenumber", [], "array", false, false, false, 54), "html", null, true);
         echo "</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"card-body border-top\">
-\t\t\t\t\t<h3 class=\"font-16\">Rating</h3>
-\t\t\t\t\t<h1 class=\"mb-0\">4.8</h1>
-\t\t\t\t\t<div class=\"rating-star\">
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<p class=\"d-inline-block text-dark\">14 Reviews
-\t\t\t\t\t\t</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-
 \t\t\t</div>
 \t\t\t<!-- ============================================================== -->
 \t\t<!-- end card profile -->
@@ -194,8 +178,8 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<h1 class=\"mb-1\">";
-        // line 113
-        echo twig_escape_filter($this->env, (isset($context["propertyCount"]) || array_key_exists("propertyCount", $context) ? $context["propertyCount"] : (function () { throw new RuntimeError('Variable "propertyCount" does not exist.', 113, $this->source); })()), "html", null, true);
+        // line 97
+        echo twig_escape_filter($this->env, (isset($context["propertyCount"]) || array_key_exists("propertyCount", $context) ? $context["propertyCount"] : (function () { throw new RuntimeError('Variable "propertyCount" does not exist.', 97, $this->source); })()), "html", null, true);
         echo "</h1>
 \t\t\t\t\t\t\t\t\t\t<p>Properties</p>
 \t\t\t\t\t\t\t\t\t</div>
@@ -205,8 +189,8 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<h1 class=\"mb-1\">";
-        // line 121
-        echo twig_escape_filter($this->env, (isset($context["agencyCount"]) || array_key_exists("agencyCount", $context) ? $context["agencyCount"] : (function () { throw new RuntimeError('Variable "agencyCount" does not exist.', 121, $this->source); })()), "html", null, true);
+        // line 105
+        echo twig_escape_filter($this->env, (isset($context["agencyCount"]) || array_key_exists("agencyCount", $context) ? $context["agencyCount"] : (function () { throw new RuntimeError('Variable "agencyCount" does not exist.', 105, $this->source); })()), "html", null, true);
         echo "</h1>
 \t\t\t\t\t\t\t\t\t\t<p>Agency</p>
 \t\t\t\t\t\t\t\t\t</div>
@@ -216,8 +200,8 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<h1 class=\"mb-1\">";
-        // line 129
-        echo twig_escape_filter($this->env, (isset($context["agentsCount"]) || array_key_exists("agentsCount", $context) ? $context["agentsCount"] : (function () { throw new RuntimeError('Variable "agentsCount" does not exist.', 129, $this->source); })()), "html", null, true);
+        // line 113
+        echo twig_escape_filter($this->env, (isset($context["agentsCount"]) || array_key_exists("agentsCount", $context) ? $context["agentsCount"] : (function () { throw new RuntimeError('Variable "agentsCount" does not exist.', 113, $this->source); })()), "html", null, true);
         echo "</h1>
 \t\t\t\t\t\t\t\t\t\t<p>Agent</p>
 \t\t\t\t\t\t\t\t\t</div>
@@ -239,57 +223,59 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t\t<div class=\"section-block\">
 \t\t\t\t\t\t\t\t\t<h3 class=\"section-title\">User Requested Plans</h3>
 \t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t";
-        // line 151
-        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 151, $this->source); })());
+        // line 135
+        echo (isset($context["tableData"]) || array_key_exists("tableData", $context) ? $context["tableData"] : (function () { throw new RuntimeError('Variable "tableData" does not exist.', 135, $this->source); })());
         echo "
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane fade\" id=\"pills-review\" role=\"tabpanel\" aria-labelledby=\"pills-review-tab\">
 \t\t\t\t\t\t<div class=\"card\">
-                                            <div class=\"card-body\">
-                                                <div class=\"row\">
-                                                    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
-                                                        <div class=\"media influencer-profile-data d-flex align-items-center p-2\">
-                                                            <div class=\"mr-4\">
-                                                                <img src=\"assets/images/slack.png\" alt=\"User Avatar\" class=\"user-avatar-lg\">
-                                                            </div>
-                                                            <div class=\"media-body \">
-                                                                <div class=\"influencer-profile-data\">
-                                                                    <h3 class=\"m-b-10\">Your Campaign Title Here</h3>
-                                                                    <p>
-                                                                        <span class=\"m-r-20 d-inline-block\">Draft Due Date
-                                                                            <span class=\"m-l-10 text-primary\">24 Jan 2018</span>
-                                                                        </span>
-                                                                        <span class=\"m-r-20 d-inline-block\"> Publish Date
-                                                                            <span class=\"m-l-10 text-secondary\">30 Feb 2018</span>
-                                                                        </span>
-                                                                            <span class=\"m-r-20 d-inline-block\">Ends <span class=\"m-l-10  text-info\">30 May, 2018</span>
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"border-top card-footer p-0\">
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">45k</h4>
-                                                    <p>Total Reach</p>
-                                                </div>
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">29k</h4>
-                                                    <p>Total Views</p>
-                                                </div>
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">5k</h4>
-                                                    <p>Total Click</p>
-                                                </div>
-                                            </div>
-                                        </div>
-\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"media influencer-profile-data d-flex align-items-center p-2\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"mr-4\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/images/slack.png\" alt=\"User Avatar\" class=\"user-avatar-lg\">
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"media-body \">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"influencer-profile-data\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"m-b-10\">Your Campaign Title Here</h3>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">Draft Due Date
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10 text-primary\">24 Jan 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPublish Date
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10 text-secondary\">30 Feb 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">Ends
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10  text-info\">30 May, 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"border-top card-footer p-0\">
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">45k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Reach</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">29k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Views</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">5k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Click</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane fade\" id=\"pills-msg\" role=\"tabpanel\" aria-labelledby=\"pills-msg-tab\">
 \t\t\t\t\t\t<div class=\"card\">
@@ -349,7 +335,7 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 
     public function getDebugInfo()
     {
-        return array (  245 => 151,  220 => 129,  209 => 121,  198 => 113,  138 => 56,  132 => 53,  120 => 44,  116 => 43,  110 => 40,  74 => 6,  67 => 5,  53 => 3,  36 => 1,);
+        return array (  229 => 135,  204 => 113,  193 => 105,  182 => 97,  136 => 54,  130 => 51,  118 => 42,  114 => 41,  108 => 38,  74 => 6,  67 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -363,9 +349,7 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t<div class=\"row\">
 \t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
 \t\t\t<div class=\"page-header\">
-\t\t\t\t<h3 class=\"mb-2\">Reality Bahrain Profile
-\t\t\t\t</h3>
-\t\t\t\t<p class=\"pageheader-text\">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+\t\t\t\t<h3 class=\"mb-2\">Admin Dashboard</h3>
 \t\t\t\t<div class=\"page-breadcrumb\">
 \t\t\t\t\t<nav aria-label=\"breadcrumb\">
 \t\t\t\t\t\t<ol class=\"breadcrumb\">
@@ -413,20 +397,6 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"card-body border-top\">
-\t\t\t\t\t<h3 class=\"font-16\">Rating</h3>
-\t\t\t\t\t<h1 class=\"mb-0\">4.8</h1>
-\t\t\t\t\t<div class=\"rating-star\">
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<i class=\"fa fa-fw fa-star\"></i>
-\t\t\t\t\t\t<p class=\"d-inline-block text-dark\">14 Reviews
-\t\t\t\t\t\t</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-
 \t\t\t</div>
 \t\t\t<!-- ============================================================== -->
 \t\t<!-- end card profile -->
@@ -503,54 +473,56 @@ class __TwigTemplate_f3505b1bcdf766cca0a1234f9fb4f36d15df17e706903577dda75c06a79
 \t\t\t\t\t\t\t\t<div class=\"section-block\">
 \t\t\t\t\t\t\t\t\t<h3 class=\"section-title\">User Requested Plans</h3>
 \t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t{{ tableData|raw }}
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane fade\" id=\"pills-review\" role=\"tabpanel\" aria-labelledby=\"pills-review-tab\">
 \t\t\t\t\t\t<div class=\"card\">
-                                            <div class=\"card-body\">
-                                                <div class=\"row\">
-                                                    <div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
-                                                        <div class=\"media influencer-profile-data d-flex align-items-center p-2\">
-                                                            <div class=\"mr-4\">
-                                                                <img src=\"assets/images/slack.png\" alt=\"User Avatar\" class=\"user-avatar-lg\">
-                                                            </div>
-                                                            <div class=\"media-body \">
-                                                                <div class=\"influencer-profile-data\">
-                                                                    <h3 class=\"m-b-10\">Your Campaign Title Here</h3>
-                                                                    <p>
-                                                                        <span class=\"m-r-20 d-inline-block\">Draft Due Date
-                                                                            <span class=\"m-l-10 text-primary\">24 Jan 2018</span>
-                                                                        </span>
-                                                                        <span class=\"m-r-20 d-inline-block\"> Publish Date
-                                                                            <span class=\"m-l-10 text-secondary\">30 Feb 2018</span>
-                                                                        </span>
-                                                                            <span class=\"m-r-20 d-inline-block\">Ends <span class=\"m-l-10  text-info\">30 May, 2018</span>
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=\"border-top card-footer p-0\">
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">45k</h4>
-                                                    <p>Total Reach</p>
-                                                </div>
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">29k</h4>
-                                                    <p>Total Views</p>
-                                                </div>
-                                                <div class=\"campaign-metrics d-xl-inline-block\">
-                                                    <h4 class=\"mb-0\">5k</h4>
-                                                    <p>Total Click</p>
-                                                </div>
-                                            </div>
-                                        </div>
-\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t\t<div class=\"col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"media influencer-profile-data d-flex align-items-center p-2\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"mr-4\">
+\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/images/slack.png\" alt=\"User Avatar\" class=\"user-avatar-lg\">
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"media-body \">
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"influencer-profile-data\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"m-b-10\">Your Campaign Title Here</h3>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">Draft Due Date
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10 text-primary\">24 Jan 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPublish Date
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10 text-secondary\">30 Feb 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-r-20 d-inline-block\">Ends
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"m-l-10  text-info\">30 May, 2018</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"border-top card-footer p-0\">
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">45k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Reach</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">29k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Views</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"campaign-metrics d-xl-inline-block\">
+\t\t\t\t\t\t\t\t\t<h4 class=\"mb-0\">5k</h4>
+\t\t\t\t\t\t\t\t\t<p>Total Click</p>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane fade\" id=\"pills-msg\" role=\"tabpanel\" aria-labelledby=\"pills-msg-tab\">
 \t\t\t\t\t\t<div class=\"card\">

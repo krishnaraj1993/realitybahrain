@@ -51,6 +51,7 @@ class PropertyRepository extends ServiceEntityRepository
                 'ps.id as pstatus,
                 pt.id as ptype,
                 pe.id as ewa,
+                p.listingFor,
                 pf.id as furnishing,
                 pd.SeoTags,
                 pd.city,
@@ -74,8 +75,10 @@ class PropertyRepository extends ServiceEntityRepository
     public function getFilterData($param, $type = 'default', $advanced = null)
     {
         $qb = $this->createQueryBuilder('p')
+            ->addSelect('pt.name as propertyType, ps.name as propertyStatus')
             ->join('App:PropertyDetails', 'pd', 'WITH', 'pd.parent = p.id')
             ->join('p.propertyType', 'pt')
+            ->join('p.propertyStatus', 'ps')
             ->Where('p.status != :status_')
             ->setParameter('status_', StatusConstants::DELETED);
         if ($type == 'default') {

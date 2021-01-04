@@ -9,7 +9,7 @@ foreach ($products['data'] as $key => $product) {
 ?>
 <li class="col-lg-4">
     <div class="property_box wow fadeInUp">
-        <div class="propertyImg"><img alt="" src="http://localhost:8000/<?php echo $product['assets']; ?>"></div>
+        <div class="propertyImg"><img alt="" src="http://ec2-13-212-39-227.ap-southeast-1.compute.amazonaws.com/admin/public/<?php echo $product['assets']; ?>"></div>
         <h3><a href="#"><?php echo $product['Title']; ?></a></h3>
         <div class="property_location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
             <?php echo $product['location']; ?>

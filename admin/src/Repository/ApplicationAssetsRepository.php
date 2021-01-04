@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\ApplicationAssets;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query;
 
 /**
  * @method ApplicationAssets|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,32 +20,28 @@ class ApplicationAssetsRepository extends ServiceEntityRepository
         parent::__construct($registry, ApplicationAssets::class);
     }
 
-    // /**
-    //  * @return ApplicationAssets[] Returns an array of ApplicationAssets objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function feathAll()
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
+        return $this->createQueryBuilder('p')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult(Query::HYDRATE_ARRAY);
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?ApplicationAssets
+    public function feathById($id)
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.id = :id')
+            ->setParameter('id', $id)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getResult(Query::HYDRATE_ARRAY);
     }
-    */
+
+    public function feathByPropertyId($id)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.property = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getResult(Query::HYDRATE_ARRAY);
+    }
 }

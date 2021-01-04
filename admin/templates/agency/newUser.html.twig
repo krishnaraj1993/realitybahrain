@@ -11,15 +11,15 @@
 			<div class="col-sm-6"></div>
 			<div class="col-sm-6 card">
 				<div class="formcontainer card-body">
-					<form action="" method="POST">
+					<form action="" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
-							<label for="fname" class="col-form-label">First Name</label>
+							<label for="fname" class="col-form-label">Agency Name</label>
 							<input type="text" class="form-control" id="fname" value="{{ data['firstname'] }}" name="firstname" placeholder="Your name.." required>
 							<input type="hidden" value="{{ data['id'] }}" id="id" name="id">
 						</div>
 
 						<div class="form-group">
-							<label for="fname" class="col-form-label">Last Name</label>
+							<label for="fname" class="col-form-label">Agency Admin</label>
 							<input type="text" class="form-control" id="lname" value="{{ data['lastname'] }}" name="lastname" placeholder="Your name.." required>
 						</div>
 
@@ -33,7 +33,7 @@
 							<input type="file" class="form-control" id="file" name="profile" placeholder="Your name..">
 
 						</div>
-						<div class="form-group" {% if data['id']!=0  %} style="display:none"  {% endif %}>
+						<div class="form-group" {% if data['id']!=0 %} style="display:none" {% endif %}>
 							<label for="fname" class="col-form-label">User Role</label>
 							<select class="form-control" id="userrole" name="userrole">
 								<option value="ROLE_AGENCY">Agency</option>
@@ -43,7 +43,7 @@
 
 						<div class="form-group">
 							<label for="fname" class="col-form-label">Password</label>
-							<input type="text" class="form-control" id="plainPassword"  name="plainPassword" placeholder="Your name.." required>
+							<input type="text" class="form-control" id="plainPassword" name="plainPassword" placeholder="Your name.." required>
 
 						</div>
 
@@ -57,10 +57,91 @@
 							<label for="fname" class="col-form-label">Address</label>
 							<input type="text" class="form-control" id="address" value="{{ data['address'] }}" name="address" placeholder="Your name.." required>
 						</div>
+						{% if plans %}
+							<div class="form-group" {% if data['id']!=0 %} style="display:none" {% endif %}>
+								<label for="fname" class="col-form-label">User Plan</label>
 
+
+								<div class="input-group mb-3">
+									<select class="form-control" id="userPlan" name="userPlan" style="height: 41px;">
+										{% for  plan in plans %}
+											<option value="{{ plan['id'] }}">{{ plan['title'] }}</option>
+										{% endfor %}
+									</select>
+									<!--<div class="input-group-append">
+										<button type="button" id="addon-modal-pop-up" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">AddOns</button>
+									</div>-->
+								</div>
+							</div>
+						{% endif %}
+						<!-- Add Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+										<a href="#" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</a>
+									</div>
+									<div class="modal-body">
+										<div class="form-row">
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom03">Title</label>
+												<input type="text" name="title" class="form-control input0" id="input1" placeholder="Title" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom04">BHD</label>
+												<input type="text" name="bhd" class="form-control input1" id="input2" placeholder="BHD" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom05">Six Month Package</label>
+												<input type="text" name="six_month_package" class="form-control input2" id="input3" placeholder="Six Month Package" required="">
+											</div>
+										</div>
+
+										<div class="form-row">
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom03">Annual Package</label>
+												<input type="text" name="annual_package" class="form-control input3" id="input4" placeholder="Annual Package" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom04">Promo Annual</label>
+												<input type="text" name="promo_annual" class="form-control input4" id="input5" placeholder="Promo Annual" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom05">Listing</label>
+												<input type="text" name="listing" class="form-control input5" id="input6" placeholder="Listing" required="">
+											</div>
+										</div>
+
+										<div class="form-row">
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom03">CRM</label>
+												<input type="text" name="crm" class="form-control input6" id="input7" placeholder="CRM" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom04">Featured</label>
+												<input type="text" name="fetured" class="form-control input7" id="input8" placeholder="Featured" required="">
+											</div>
+											<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+												<label for="validationCustom05">Premium</label>
+												<input type="text" name="premium" class="form-control input8" id="input9" placeholder="Premium" required="">
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>
+										<button class="btn btn-primary submit-addons" type="button" onclick>Save</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Add Modal end-->
 						<div class="form-group">
 							<input class="btn btn-primary" type="submit" value="Submit" style="width: 100%;">
 						</div>
+						<div id="addon-data"></div>
 					</form>
 				</div>
 			</div>
